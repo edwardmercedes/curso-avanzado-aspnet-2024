@@ -11,7 +11,6 @@ namespace _04_Inventory.Api.Infrastruture
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
             modelBuilder.Entity<ARTICULOS>().HasKey(x => new {x.CODIGO});
             modelBuilder.Entity<CATEGORIA>().HasKey(x => new {x.CODIGO});
         }
