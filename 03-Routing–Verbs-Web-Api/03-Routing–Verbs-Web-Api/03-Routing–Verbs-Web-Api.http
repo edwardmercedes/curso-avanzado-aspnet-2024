@@ -1,6 +1,0 @@
-@_03_Routing_Verbs_Web_Api_HostAddress = http://localhost:5224
-
-GET {{_03_Routing_Verbs_Web_Api_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
