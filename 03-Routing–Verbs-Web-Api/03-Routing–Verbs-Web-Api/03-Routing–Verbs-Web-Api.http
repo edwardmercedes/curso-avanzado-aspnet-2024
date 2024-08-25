@@ -1,0 +1,10 @@
+<<<<<<< HEAD
+@_03_Routing_Verbs_Web_Api_HostAddress = http://localhost:5224
+=======
+@_03_Routing_Verbs_Web_Api_HostAddress = http://localhost:5041
+>>>>>>> b9de1b7 (a)
+
+GET {{_03_Routing_Verbs_Web_Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
