@@ -1,5 +1,7 @@
 using _04_Inventory.Api;
 using _04_Inventory.Api.Infrastruture;
+using _04_Inventory.Api.Mapper;
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
@@ -19,6 +21,14 @@ builder.Services.AddDbContext<DBContext>(options =>
 {
     options.UseOracle(settings.Value.ConnectionString, op => op.UseOracleSQLCompatibility(OracleSQLCompatibility.DatabaseVersion19));
 });
+
+//automaper
+var mappingConfig = new MapperConfiguration(mc =>
+{
+    mc.AddProfile(new AutoMapping());
+});
+IMapper mapper = mappingConfig.CreateMapper();
+builder.Services.AddSingleton(mapper);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

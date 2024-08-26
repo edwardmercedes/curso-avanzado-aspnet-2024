@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 ﻿using _03_Routing_Verbs_Web_Api.DTO;
 using Microsoft.AspNetCore.Http;
-=======
+
 ﻿using Microsoft.AspNetCore.Http;
->>>>>>> b9de1b7 (a)
+
 using Microsoft.AspNetCore.Mvc;
 
 namespace _03_Routing_Verbs_Web_Api.Controllers
@@ -12,13 +11,12 @@ namespace _03_Routing_Verbs_Web_Api.Controllers
     [ApiController]
     public class EmployeesController : ControllerBase
     {
-<<<<<<< HEAD
-        List<EmployeeDTO> employees = new List<EmployeeDTO>(); 
+        List<EmployeeDTO> employees = new List<EmployeeDTO>();
         public EmployeesController()
         {
-            employees.Add(new EmployeeDTO {Id = 1, Name = "Edgar", Position = "Programador" });
-            employees.Add(new EmployeeDTO {Id = 2, Name = "Javier", Position = "Mecanico" });
-            employees.Add(new EmployeeDTO {Id = 3, Name = "Goku", Position = "Sayayin" });
+            employees.Add(new EmployeeDTO { Id = 1, Name = "Edgar", Position = "Programador" });
+            employees.Add(new EmployeeDTO { Id = 2, Name = "Javier", Position = "Mecanico" });
+            employees.Add(new EmployeeDTO { Id = 3, Name = "Goku", Position = "Sayayin" });
         }
 
 
@@ -33,32 +31,34 @@ namespace _03_Routing_Verbs_Web_Api.Controllers
         [HttpGet("GetEmployees/{id}")]
         public IActionResult GetEmployees(int id)
         {
-            var employee = employees.Find(x=> x.Id == id);
+            var employee = employees.Find(x => x.Id == id);
 
             return Ok(employee);
 
-        }   
-        
+        }
+
         [HttpPost("CreateEmployees")]
         public IActionResult CreateEmployees([FromBody] EmployeeDTO employee)
         {
             employees.Add(employee);
 
             return Ok(employee);
-=======
-        [HttpGet("GetEmployees")]
-        public IActionResult GetEmployees()
-        {
-            return Ok(new { message = "Employees List" });
 
-        }
+            [HttpGet("GetEmployees")]
+            public IActionResult GetEmployees()
+            {
+                return Ok(new { message = "Employees List" });
 
-        [HttpGet("GetEmployee")]
-        public IActionResult GetEmployees(string id)
-        {
-            return Ok(new { message = id });
->>>>>>> b9de1b7 (a)
+            }
 
+            [HttpGet("GetEmployee")] 
+            public IActionResult GetEmployee(string id)
+            {
+                return Ok(new { message = id });
+
+
+            }
         }
     }
+
 }
