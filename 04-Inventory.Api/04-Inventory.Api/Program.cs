@@ -19,7 +19,11 @@ var settings = serviceProvider.GetService<IOptions<SettingsValue>>();
 
 builder.Services.AddDbContext<DBContext>(options =>
 {
-    options.UseOracle(settings.Value.ConnectionString, op => op.UseOracleSQLCompatibility(OracleSQLCompatibility.DatabaseVersion19));
+    //options.UseOracle(settings.Value.ConnectionString, op => op.UseOracleSQLCompatibility(OracleSQLCompatibility.DatabaseVersion19));
+    options.UseOracle(settings.Value.ConnectionString, op => op.UseOracleSQLCompatibility("11"));
+
+
+
 });
 
 //automaper
