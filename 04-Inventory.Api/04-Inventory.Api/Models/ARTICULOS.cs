@@ -17,6 +17,6 @@ namespace _04_Inventory.Api.Models
         public DateTime? CREACION_TSTAMP { get; set; }
         public string ?CREACION_USUARIO { get; set; }
         public DateTime? ULT_MODIF_TSTAMP { get; set; }
-        public string? ULT_MODIF_USUARIO { get; set; }
+        public List<ARTICULOS> ULT_MODIF_USUARIO { get; set; }
     }
 }

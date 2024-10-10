@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-Inventory.Api", "04-Inventory.Api\04-Inventory.Api.csproj", "{245E1209-6814-487E-81F1-3D1BC9E00699}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04-Inventory.Api", "04-Inventory.Api\04-Inventory.Api.csproj", "{245E1209-6814-487E-81F1-3D1BC9E00699}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebInventoryApp", "WebInventoryApp\WebInventoryApp.csproj", "{8FD37492-B67E-4B6C-810B-9FCFDE46798A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{245E1209-6814-487E-81F1-3D1BC9E00699}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{245E1209-6814-487E-81F1-3D1BC9E00699}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{245E1209-6814-487E-81F1-3D1BC9E00699}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FD37492-B67E-4B6C-810B-9FCFDE46798A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FD37492-B67E-4B6C-810B-9FCFDE46798A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FD37492-B67E-4B6C-810B-9FCFDE46798A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FD37492-B67E-4B6C-810B-9FCFDE46798A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
