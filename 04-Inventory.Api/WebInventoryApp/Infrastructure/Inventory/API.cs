@@ -20,5 +20,15 @@
                 return $"{baseUrl}Categories/DeleteCategory/{code}";
             }
         }
+
+
+        public static class Items
+        {
+            public static string GetAllItems(string baseUrl)
+            {
+                return $"{baseUrl}Items/GetAllItems";
+            }
+        }
+
     }
 }

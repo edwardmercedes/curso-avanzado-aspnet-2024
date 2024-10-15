@@ -4,6 +4,7 @@ namespace WebInventoryApp.Services.Inventory
 {
     public interface IInventoryServices
     {
+        #region Catetogies
         Task<string> GetAllCategories();
 
         Task CreateCategory(CategoryDTO category);
@@ -12,6 +13,14 @@ namespace WebInventoryApp.Services.Inventory
 
         Task DeleteCategory(int code);
 
-        
+        #endregion
+
+        #region productos
+        Task<string> GetAllItems();
+
+        Task CreateItems(CategoryDTO category);
+
+        #endregion
+
     }
 }

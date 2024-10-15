@@ -8,6 +8,8 @@ using Oracle.ManagedDataAccess.Client;
 
 namespace _04_Inventory.Api.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class ItemsController : ControllerBase
     {
         private readonly DBContext _context;

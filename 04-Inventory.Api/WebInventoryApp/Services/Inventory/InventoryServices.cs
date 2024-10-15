@@ -11,13 +11,13 @@ namespace WebInventoryApp.Services.Inventory
         private readonly IOptions<SettingsValue> _setting;
         private readonly string _baseUrl;
 
-
         public InventoryServices(HttpClient httpClient, IOptions<SettingsValue> setting) { 
             _httpClient = httpClient;
             _setting = setting;
             _baseUrl = _setting.Value.InventoryApiUrl;
         }
 
+        #region categories
         public async Task<string> GetAllCategories()
         {
             var uri = API.Categories.GetAllCategories(_baseUrl);
@@ -42,5 +42,22 @@ namespace WebInventoryApp.Services.Inventory
             var uri = API.Categories.UpdateCategory(baseUrl : _baseUrl);
             var httpResponse = await _httpClient.PutAsJsonAsync(uri, category);
         }
+        #endregion
+
+
+
+        #region productos
+        public async Task<string> GetAllItems()
+        {
+            var uri = API.Items.GetAllItems(_baseUrl);
+            var httpResponse = _httpClient.GetAsync(uri);
+            return await httpResponse.Result.Content.ReadAsStringAsync();
+        }
+
+        public Task CreateItems(CategoryDTO category)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
     }
 }

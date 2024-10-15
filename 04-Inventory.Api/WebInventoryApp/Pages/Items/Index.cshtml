@@ -1,0 +1,27 @@
+﻿@page
+@model WebInventoryApp.Pages.Items.IndexModel
+@{
+}
+
+<div class="container">
+    <div>
+        <h2 class="text-center text-info">Productos</h2>
+    </div>
+
+    <div id="itemsGrid"></div>
+    <div class="row justify-content-end">
+        <div class="col">
+            <div class="d-flex justify-content-end">
+                <a id="detailsButton" class="btn btn-secondary me-2 text-white" asp-page="Detail" asp-route-code="code" data-dynamic-parameters="code">Detalle</a>
+                <a id="createButton" class="btn btn-success me-2 text-white" asp-page="Create">Crear</a>
+                <a id="editsButton" class="btn btn-info me-2 text-white" asp-page="Edit" asp-route-code="code" data-dynamic-parameters="code">Editar</a>
+                <button id="deleteButton" type="button" class="btn btn-danger me-2 text-white" onclick="deleteItem()">Eliminar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-2">
+
+        <div id="itemsGrid"></div>
+    </div>
+</div>
